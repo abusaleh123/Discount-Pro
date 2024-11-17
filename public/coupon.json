@@ -23,6 +23,7 @@
       ],
       "shop_Link": "https://techworld.com",
       "category": "Electronics",
+      "totalCoupons": 20,
       "isSaleOn": true
     },
     {
@@ -49,6 +50,7 @@
       ],
       "shop_Link": "https://fashionfiesta.com",
       "category": "Clothing",
+      "totalCoupons": 7,
       "isSaleOn": true
     },
     {
@@ -96,11 +98,13 @@
           "description": "Get a free yoga mat with purchases over $100.",
           "expiry_date": "2024-12-20",
           "condition": "Limited to one free item per order.",
+          
           "coupon_type": "Free Gift"
         }
       ],
       "shop_Link": "https://fitnesspro.com",
       "category": "Fitness",
+      "totalCoupons": 10,
       "isSaleOn": true
     },
     {
@@ -127,6 +131,7 @@
       ],
       "shop_Link": "https://homehaven.com",
       "category": "Home & Living",
+      "totalCoupons": 5,
       "isSaleOn": false
     },
     {
@@ -153,6 +158,7 @@
       ],
       "shop_Link": "https://booknook.com",
       "category": "Books",
+      "totalCoupons": 15,
       "isSaleOn": true
     },
     {
@@ -179,7 +185,8 @@
       ],
       "shop_Link": "https://beautybliss.com",
       "category": "Beauty",
-      "isSaleOn": false
+      "totalCoupons": 3,
+      "isSaleOn": true
     },
     {
       "_id": "8j9k0l1m2n",
@@ -205,7 +212,8 @@
       ],
       "shop_Link": "https://gadgetgalaxy.com",
       "category": "Electronics",
-      "isSaleOn": true
+      "totalCoupons": 8,
+      "isSaleOn": false
     },
     {
       "_id": "9o0p1q2r3s",
@@ -231,6 +239,7 @@
       ],
       "shop_Link": "https://petparadise.com",
       "category": "Pets",
+      "totalCoupons": 4,
       "isSaleOn": true
     },
     {
@@ -257,6 +266,7 @@
       ],
       "shop_Link": "https://adventuregear.com",
       "category": "Outdoor",
+      "totalCoupons": 12,
       "isSaleOn": true
     }
   ]
