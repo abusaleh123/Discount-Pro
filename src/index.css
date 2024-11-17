@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active{
+  
+    border-bottom: 2px solid green;
+}
+
+.bgimage{
+    background-image: url("../src/assets/240_F_921828357_r2Pl2P9ka51J6FrRWuhC0o1LGx2mj0sE.jpg");
+    /* opacity: 0.2; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* height: 900px; */
+    background-position: center;
+}

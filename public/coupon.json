@@ -1,0 +1,263 @@
+[
+    {
+      "_id": "1a2b3c4d5e",
+      "brand_name": "Tech World",
+      "rating": 4.5,
+      "description": "Your one-stop shop for the latest tech gadgets.",
+      "brand_logo": "https://i.ibb.co.com/TR9BdjL/preview-page0.jpg",
+      "coupons": [
+        {
+          "coupon_code": "TECH10",
+          "description": "Get 10% off on all electronics.",
+          "expiry_date": "2024-12-31",
+          "condition": "Minimum purchase of $100 required.",
+          "coupon_type": "Discount"
+        },
+        {
+          "coupon_code": "FREESHIP",
+          "description": "Free shipping on all orders over $50.",
+          "expiry_date": "2024-11-30",
+          "condition": "Valid for standard shipping only.",
+          "coupon_type": "Free Shipping"
+        }
+      ],
+      "shop_Link": "https://techworld.com",
+      "category": "Electronics",
+      "isSaleOn": true
+    },
+    {
+      "_id": "2f3g4h5i6j",
+      "brand_name": "Fashion Fiesta",
+      "rating": 4.8,
+      "description": "Trendy and affordable clothing for all.",
+      "brand_logo": "https://i.ibb.co.com/hV2R0fj/channels4-profile.jpg",
+      "coupons": [
+        {
+          "coupon_code": "STYLE20",
+          "description": "20% off on your first order.",
+          "expiry_date": "2025-01-15",
+          "condition": "New customers only.",
+          "coupon_type": "Discount"
+        },
+        {
+          "coupon_code": "BOGO50",
+          "description": "Buy one get 50% off on the second item.",
+          "expiry_date": "2024-12-10",
+          "condition": "Applicable on select items only.",
+          "coupon_type": "Bundle Offer"
+        }
+      ],
+      "shop_Link": "https://fashionfiesta.com",
+      "category": "Clothing",
+      "isSaleOn": true
+    },
+    {
+      "_id": "3k4l5m6n7o",
+      "brand_name": "Gourmet Bites",
+      "rating": 4.2,
+      "description": "Delicious snacks and meals delivered to your doorstep.",
+      "brand_logo": "https://i.ibb.co.com/SsBpy3T/04433828427857-55bfd7fa39727.png",
+      "coupons": [
+        {
+          "coupon_code": "SNACKS15",
+          "description": "Save 15% on all snack boxes.",
+          "expiry_date": "2024-11-25",
+          "condition": "No minimum purchase required.",
+          "coupon_type": "Discount"
+        },
+        {
+          "coupon_code": "MEAL20",
+          "description": "20% off on meal subscriptions.",
+          "expiry_date": "2025-03-01",
+          "condition": "Valid for monthly plans only.",
+          "coupon_type": "Discount"
+        }
+      ],
+      "shop_Link": "https://gourmetbites.com",
+      "category": "Food & Beverage",
+      "isSaleOn": false
+    },
+    {
+      "_id": "4p5q6r7s8t",
+      "brand_name": "Fitness Pro",
+      "rating": 4.7,
+      "description": "Top-notch fitness gear and accessories.",
+      "brand_logo": "https://i.ibb.co.com/3fmjXK3/images.png",
+      "coupons": [
+        {
+          "coupon_code": "GYM15",
+          "description": "15% off on all gym equipment.",
+          "expiry_date": "2024-12-05",
+          "condition": "Valid for orders above $200.",
+          "coupon_type": "Discount"
+        },
+        {
+          "coupon_code": "YOGAFREE",
+          "description": "Get a free yoga mat with purchases over $100.",
+          "expiry_date": "2024-12-20",
+          "condition": "Limited to one free item per order.",
+          "coupon_type": "Free Gift"
+        }
+      ],
+      "shop_Link": "https://fitnesspro.com",
+      "category": "Fitness",
+      "isSaleOn": true
+    },
+    {
+      "_id": "5u6v7w8x9y",
+      "brand_name": "Home Haven",
+      "rating": 4.3,
+      "description": "Modern furniture and home decor at great prices.",
+      "brand_logo": "https://i.ibb.co.com/dpVxYnk/dd0e42386f0953171fd7c71e80df7597-1200-80.webp",
+      "coupons": [
+        {
+          "coupon_code": "DECOR10",
+          "description": "10% off on all decor items.",
+          "expiry_date": "2024-11-30",
+          "condition": "No minimum purchase required.",
+          "coupon_type": "Discount"
+        },
+        {
+          "coupon_code": "FURNISH50",
+          "description": "$50 off on furniture purchases over $500.",
+          "expiry_date": "2024-12-31",
+          "condition": "Cannot be combined with other offers.",
+          "coupon_type": "Discount"
+        }
+      ],
+      "shop_Link": "https://homehaven.com",
+      "category": "Home & Living",
+      "isSaleOn": false
+    },
+    {
+      "_id": "6z7a8b9c0d",
+      "brand_name": "Book Nook",
+      "rating": 4.9,
+      "description": "A paradise for book lovers with exclusive collections.",
+      "brand_logo": "https://i.ibb.co.com/vwrSf84/square-01.jpg",
+      "coupons": [
+        {
+          "coupon_code": "READ10",
+          "description": "10% off on all books.",
+          "expiry_date": "2025-01-31",
+          "condition": "Applicable for all customers.",
+          "coupon_type": "Discount"
+        },
+        {
+          "coupon_code": "BUY2GET1",
+          "description": "Buy 2 books and get 1 free.",
+          "expiry_date": "2024-12-25",
+          "condition": "Free book must be of equal or lesser value.",
+          "coupon_type": "Bundle Offer"
+        }
+      ],
+      "shop_Link": "https://booknook.com",
+      "category": "Books",
+      "isSaleOn": true
+    },
+    {
+      "_id": "7e8f9g0h1i",
+      "brand_name": "Beauty Bliss",
+      "rating": 4.6,
+      "description": "Premium skincare and makeup products.",
+      "brand_logo": "https://i.ibb.co.com/Yk85C02/Beauty-1-cf7fd2f8-32b7-48b3-9607-3bba1f44f982.webp",
+      "coupons": [
+        {
+          "coupon_code": "GLOW20",
+          "description": "20% off on all skincare products.",
+          "expiry_date": "2025-02-28",
+          "condition": "No minimum purchase required.",
+          "coupon_type": "Discount"
+        },
+        {
+          "coupon_code": "MAKEUP5",
+          "description": "$5 off on makeup orders over $50.",
+          "expiry_date": "2024-12-15",
+          "condition": "Valid for select products only.",
+          "coupon_type": "Discount"
+        }
+      ],
+      "shop_Link": "https://beautybliss.com",
+      "category": "Beauty",
+      "isSaleOn": false
+    },
+    {
+      "_id": "8j9k0l1m2n",
+      "brand_name": "Gadget Galaxy",
+      "rating": 4.4,
+      "description": "Affordable and cutting-edge tech accessories.",
+      "brand_logo": "https://i.ibb.co.com/FXzDBc6/images-1.png",
+      "coupons": [
+        {
+          "coupon_code": "ACCESS10",
+          "description": "10% off on all accessories.",
+          "expiry_date": "2024-12-10",
+          "condition": "Minimum purchase of $30.",
+          "coupon_type": "Discount"
+        },
+        {
+          "coupon_code": "CHARGE50",
+          "description": "50% off on phone chargers.",
+          "expiry_date": "2024-11-25",
+          "condition": "While supplies last.",
+          "coupon_type": "Discount"
+        }
+      ],
+      "shop_Link": "https://gadgetgalaxy.com",
+      "category": "Electronics",
+      "isSaleOn": true
+    },
+    {
+      "_id": "9o0p1q2r3s",
+      "brand_name": "Pet Paradise",
+      "rating": 4.7,
+      "description": "Everything your pets need under one roof.",
+      "brand_logo": "https://i.ibb.co.com/KcgVR7h/images.jpg",
+      "coupons": [
+        {
+          "coupon_code": "PETLOVE15",
+          "description": "15% off on pet food.",
+          "expiry_date": "2024-12-31",
+          "condition": "No minimum purchase required.",
+          "coupon_type": "Discount"
+        },
+        {
+          "coupon_code": "TOYS25",
+          "description": "25% off on all pet toys.",
+          "expiry_date": "2024-11-30",
+          "condition": "Valid for online purchases only.",
+          "coupon_type": "Discount"
+        }
+      ],
+      "shop_Link": "https://petparadise.com",
+      "category": "Pets",
+      "isSaleOn": true
+    },
+    {
+      "_id": "10t1u2v3w4x",
+      "brand_name": "Adventure Gear",
+      "rating": 4.8,
+      "description": "Top-quality outdoor gear for your adventures.",
+      "brand_logo": "https://i.ibb.co.com/ct14zxw/2-new-adventures.png",
+      "coupons": [
+        {
+          "coupon_code": "CAMP10",
+          "description": "10% off on camping gear.",
+          "expiry_date": "2025-01-15",
+          "condition": "Valid for orders above $150.",
+          "coupon_type": "Discount"
+        },
+        {
+          "coupon_code": "HIKESHIP",
+          "description": "Free shipping on all hiking gear.",
+          "expiry_date": "2024-12-01",
+          "condition": "No minimum purchase required.",
+          "coupon_type": "Free Shipping"
+        }
+      ],
+      "shop_Link": "https://adventuregear.com",
+      "category": "Outdoor",
+      "isSaleOn": true
+    }
+  ]
+  
