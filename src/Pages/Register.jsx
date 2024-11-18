@@ -1,9 +1,12 @@
 import { useContext } from "react";
 import { AuthContext } from "../AuthProvider";
+// import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { toast, ToastContainer } from "react-toastify";
 
 
 const Register = (e) => {
-  const {createNewUser} = useContext(AuthContext);
+  const {createNewUser, setUser, showPassword } = useContext(AuthContext);
  const handleRegister = (e) => {
   e.preventDefault();
   const name = e.target.name.value;
@@ -11,13 +14,26 @@ const Register = (e) => {
   const photo = e.target.photo.value;
   const password = e.target.password.value;
   console.log(name,email,photo, password);
-  
+
+  const passwordRegex = /^(?=.*[A-Z])(?=.*[a-z]).{6,}$/;
+  if(!passwordRegex.test(password)){
+    return toast.error("Password must have one uppercase and one lowercase")
+  };
+  if(password.length < 6){
+    return toast.error("Password Should be at least 6 character")
+  }
 
   createNewUser(email, password)
   .then((result) => {
     console.log(result)
+    setUser(result);
+    toast.success("Register Successful");
  })
- .catch(error => console.log( "Error", error.message))
+ .catch(error => {
+  console.log( "Error", error.message)
+  toast.error(error.message || "Failed")
+ })
+
  }
 
 
@@ -51,15 +67,16 @@ const Register = (e) => {
                 <label className="label">
                   <span className="label-text">Password</span>
                 </label>
-                <input type="password" name="password" placeholder="Password" className="input input-bordered" required />
+                <input type={`password`} name="password" placeholder="Password" className="input input-bordered" required />
                
               </div>
               <div className="form-control mt-6">
-                <button className="btn bg-green-400 text-lg ">Register </button>
+               <button className="btn bg-green-400 text-lg ">Register </button>
               </div>
             </form>
           </div>
         </div>
+        <ToastContainer></ToastContainer>
       </div>
     );
 };
