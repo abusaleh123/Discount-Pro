@@ -1,11 +1,13 @@
 import { Link, NavLink, useLocation } from "react-router-dom";
 import logo from '../../src/assets/hot-sale.png';
 import { CiUser } from "react-icons/ci";
+import { useContext } from "react";
+import { AuthContext } from "../AuthProvider";
 
 
 const Navbar = () => {
   const location = useLocation();
-
+const {user} = useContext(AuthContext);
 const backgroundColor = location.pathname === "/brands" ? "bg-[#DE2C5C] w-full py-6 " : "bg-white";
     const links = <>
     <li className="text-lg font-semibold"><Link to={"/"}>Home</Link></li>
@@ -55,7 +57,9 @@ const backgroundColor = location.pathname === "/brands" ? "bg-[#DE2C5C] w-full p
   </div>
   <div className="navbar-end gap-4 ">
     <Link to={"/register"} className="btn btn-ghost text-lg border border-green-400"><CiUser className="text-green-400 font-bold text-2xl" />Register</Link>
-    <Link className="btn btn-ghost text-lg bg-orange-400">Login</Link>
+    {
+      user ? `${user.email} `: <Link to={"/login"} className="btn btn-ghost text-lg bg-orange-400">Login</Link>
+    }
    
   </div>
 </div>
