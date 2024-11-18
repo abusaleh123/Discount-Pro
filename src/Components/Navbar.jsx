@@ -7,12 +7,16 @@ import { AuthContext } from "../AuthProvider";
 
 const Navbar = () => {
   const location = useLocation();
-const {user} = useContext(AuthContext);
+const {user, logOut} = useContext(AuthContext);
 const backgroundColor = location.pathname === "/brands" ? "bg-[#DE2C5C] w-full py-6 " : "bg-white";
     const links = <>
     <li className="text-lg font-semibold"><Link to={"/"}>Home</Link></li>
     <li className="text-lg font-semibold"><Link to={"/brands"}>Brands</Link></li>
-    {/* <li><NavLink to={"/profile"}>Profile</NavLink></li> */}
+   {
+    user && <>
+     <li className="text-lg font-semibold"><NavLink to={"/my-profile"}>My Profile</NavLink></li>
+    </>
+   }
     <li className="text-lg font-semibold"><Link to={"/about"}>About Dev</Link></li>
         
     </>
@@ -58,7 +62,7 @@ const backgroundColor = location.pathname === "/brands" ? "bg-[#DE2C5C] w-full p
   <div className="navbar-end gap-4 ">
     <Link to={"/register"} className="btn btn-ghost text-lg border border-green-400"><CiUser className="text-green-400 font-bold text-2xl" />Register</Link>
     {
-      user ? `${user.email} `: <Link to={"/login"} className="btn btn-ghost text-lg bg-orange-400">Login</Link>
+      user ? <button onClick={logOut} className="btn  text-lg btn-primary">Log Out</button>: <Link to={"/login"} className="btn btn-ghost text-lg bg-orange-400">Login</Link>
     }
    
   </div>

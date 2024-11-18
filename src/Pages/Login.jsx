@@ -1,28 +1,72 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AuthContext } from '../AuthProvider';
+import 'react-toastify/dist/ReactToastify.css';
+import { toast, ToastContainer } from "react-toastify";
+import { useNavigate } from 'react-router-dom';
+import google from '../../src/assets/google.png'
+import auth from '../firebase.init';
+import { GoogleAuthProvider } from 'firebase/auth';
+import { signInWithPopup } from 'firebase/auth';
 
 const Login = () => {
-    const handleLogin = (e) => [
-        e.preventDefault()
-    ]
+
+  const {loginUser, setUser, googleLogin} = useContext(AuthContext);
+  const navigate = useNavigate();
+  const provider = new GoogleAuthProvider()
+
+console.log(auth, provider);
+
+    const handleLogin = (e) => {
+        e.preventDefault();
+
+        const form = e.target;
+        const email = form.email.value;
+        const password = form.password.value;
+
+        loginUser(email, password)
+        .then((result) => {
+          console.log(result);
+          setUser(result);
+          toast.success("Sign In Success");
+          navigate("/")
+        })
+        .catch(error  => {
+          console.log("Error" , error.message);
+          toast.error("Sign In Failed")
+        })
+}
+const loginWithGoogle = () => {
+  googleLogin(auth, provider)
+  .then((result) => {
+    console.log(result);
+    setUser(result)
+    navigate("/")
+  })
+  .catch((error) => {
+    console.log("Error", error)
+    toast.error( error.message || "Sign In Failed")
+  })
+ }
     return (
+      <div>
         <div className="hero ">
         <div className="hero-content flex-col ">
           <div className="text-center lg:text-left">
             <h1 className="text-5xl font-bold">Login now!</h1>
           </div>
           <div className="card bg-base-100 w-full max-w-sm shrink-0 border border-orange-300 ">
-            <form className="card-body">
+            <form onSubmit={handleLogin} className="card-body">
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Email</span>
                 </label>
-                <input type="email" placeholder="email" className="input input-bordered" required />
+                <input type="email" name='email' placeholder="email" className="input input-bordered" required />
               </div>
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Password</span>
                 </label>
-                <input type="password" placeholder="password" className="input input-bordered" required />
+                <input type="password" name='password' placeholder="password" className="input input-bordered" required />
                 <label className="label">
                   <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                 </label>
@@ -33,6 +77,28 @@ const Login = () => {
             </form>
           </div>
         </div>
+        <ToastContainer
+          position="top-center"
+          autoClose={1000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
+        >
+        </ToastContainer>
+      </div>
+      
+      <div className="">
+      <div className="divider w-2/12 mx-auto divider-">OR</div>
+      <button onClick={loginWithGoogle} className="border w-52 lg:w-72 mx-auto py-1 px-2 rounded-full flex gap-6 items-center">
+      <img className="w-10" src={google}  alt="" />
+      <p className="text-lg">Continue With Google</p>
+      </button>
+      </div>
       </div>
     );
 };

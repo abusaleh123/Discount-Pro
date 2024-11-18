@@ -4,11 +4,16 @@ import { AuthContext } from "../AuthProvider";
 import 'react-toastify/dist/ReactToastify.css';
 import { toast, ToastContainer } from "react-toastify";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import google from '../../src/assets/google.png'
+import { GoogleAuthProvider } from "firebase/auth";
+import auth from "../firebase.init";
+import { signInWithPopup } from "firebase/auth";
 
 
 const Register = () => {
-  const {createNewUser, setUser, showPassword, setShowPassword , setLoading } = useContext(AuthContext);
+  const {createNewUser, setUser, showPassword, setShowPassword , setLoading, googleSignup } = useContext(AuthContext);
+  const provider = new GoogleAuthProvider();
   const navigate = useNavigate();
  const handleRegister = (e) => {
   e.preventDefault();
@@ -45,9 +50,22 @@ const Register = () => {
  })
 
  }
+ const signInWithGoogle = () => {
+  googleSignup(auth, provider )
+  .then((result) => {
+    console.log(result);
+    setUser(result)
+    navigate("/")
+  })
+  .catch((error) => {
+    console.log("Error", error)
+    toast.error( error.message || "Sign In Failed")
+  })
+ }
 
 
     return (
+      <div>
         <div className="hero ">
         <div className="hero-content flex-col ">
           <div className="text-center lg:text-left">
@@ -78,7 +96,7 @@ const Register = () => {
                   <span className="label-text">Password</span>
                   <button 
                 onClick={() => setShowPassword(!showPassword)}
-                className="absolute right-12 bottom-32 ">{showPassword ? <FaEye />  :<FaEyeSlash />  }
+                className="absolute right-12  ">{showPassword ? <FaEye />  :<FaEyeSlash />  }
                 
                 </button>
                
@@ -89,6 +107,7 @@ const Register = () => {
               <div className="form-control mt-6">
                <button className="btn bg-green-400 text-lg ">Register </button>
               </div>
+              <p className="text-center mt-1">Already Have An Account? <Link to={"/login"}><span className="text-red-400 font-bold">Login</span></Link></p>
             </form>
           </div>
         </div>
@@ -104,6 +123,16 @@ const Register = () => {
          pauseOnHover
          theme="light"
          ></ToastContainer>
+      </div>
+
+
+      <div className="">
+      <div className="divider w-2/12 mx-auto divider-">OR</div>
+      <button onClick={signInWithGoogle} className="border w-52 lg:w-72 mx-auto py-1 px-2 rounded-full flex gap-6 items-center">
+      <img className="w-10" src={google} alt="" />
+      <p className="text-lg">Continue With Google</p>
+      </button>
+      </div>
       </div>
     );
 };
