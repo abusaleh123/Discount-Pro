@@ -28,7 +28,7 @@ const saleOn = brands.filter(isSale => isSale.isSaleOn)
         <h1 className="text-4xl font-semibold ">Top Brands</h1>
         <Marquee pauseOnHover className='border  py-4 mt-6 rounded-xl border-green-400'>
           {
-            brands.map((logo, idx) => <Link to={"/brands"} className='flex '><img key={idx} className='w-20 flex mr-12 rounded-full' src={logo.brand_logo}></img></Link>)
+            brands.map((logo, idx) => <Link to={"/brands"} className='flex '><img key={idx} className='w-20 flex mr-12 rounded-full ' src={logo.brand_logo}></img></Link>)
           }
         </Marquee>
         
@@ -45,7 +45,7 @@ const saleOn = brands.filter(isSale => isSale.isSaleOn)
    <img
       src={brand.brand_logo}
       alt="brand"
-      className="rounded-xl w-52" />
+      className="rounded-xl w-52 border" />
    </Link>
   </figure>
   <div className="card-body items-center text-start">

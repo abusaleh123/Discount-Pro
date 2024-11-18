@@ -1,9 +1,12 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import logo from '../../src/assets/hot-sale.png';
 import { CiUser } from "react-icons/ci";
 
 
 const Navbar = () => {
+  const location = useLocation();
+
+const backgroundColor = location.pathname === "/brands" ? "bg-[#DE2C5C] w-full py-6 " : "bg-white";
     const links = <>
     <li className="text-lg font-semibold"><Link to={"/"}>Home</Link></li>
     <li className="text-lg font-semibold"><Link to={"/brands"}>Brands</Link></li>
@@ -12,8 +15,8 @@ const Navbar = () => {
         
     </>
     return (
-       <div className="py-4">
-         <div className="navbar w-11/12 mx-auto">
+       <div className={`py-4 ${backgroundColor}`}>
+         <div className={`navbar w-11/12 ${backgroundColor} mx-auto`}>
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -51,7 +54,7 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end gap-4 ">
-    <Link className="btn btn-ghost text-lg border border-green-400"><CiUser className="text-green-400 font-bold text-2xl" />Register</Link>
+    <Link to={"/register"} className="btn btn-ghost text-lg border border-green-400"><CiUser className="text-green-400 font-bold text-2xl" />Register</Link>
     <Link className="btn btn-ghost text-lg bg-orange-400">Login</Link>
    
   </div>

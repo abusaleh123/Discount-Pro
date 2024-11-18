@@ -5,6 +5,8 @@ import {
 import Header from "../Header";
 import Home from "../Components/Home";
 import Banner from "../Components/Banner";
+import Brands from "../Pages/Brands";
+import Register from "../Pages/Register";
 
     
     const router = createBrowserRouter([
@@ -18,7 +20,12 @@ import Banner from "../Components/Banner";
         },
         {
           path: "/brands",
-          element: <h2>Brands</h2>
+          element: <Brands></Brands>,
+          loader: () => fetch("coupon.json")
+        },
+        {
+          path: "/register",
+          element: <Register></Register>
         }
       ]
     },
