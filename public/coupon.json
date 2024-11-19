@@ -19,6 +19,13 @@
           "expiry_date": "2024-11-30",
           "condition": "Valid for standard shipping only.",
           "coupon_type": "Free Shipping"
+        },
+        {
+          "coupon_code": "FREESHIPDWF",
+          "description": "Get 15% off on all gadget",
+          "expiry_date": "2024-09-11",
+          "condition": "Minimum purchase Of $200 required",
+          "coupon_type": "Free Shipping"
         }
       ],
       "shop_Link": "https://techworld.com",
@@ -98,7 +105,6 @@
           "description": "Get a free yoga mat with purchases over $100.",
           "expiry_date": "2024-12-20",
           "condition": "Limited to one free item per order.",
-          
           "coupon_type": "Free Gift"
         }
       ],
@@ -127,7 +133,15 @@
           "expiry_date": "2024-12-31",
           "condition": "Cannot be combined with other offers.",
           "coupon_type": "Discount"
+        },
+        {
+          "coupon_code": "FURNISH5000SD",
+          "description": "$50 off on furniture purchases over $500.",
+          "expiry_date": "2024-12-19",
+          "condition": "Cannot be combined with other offers.",
+          "coupon_type": "Bundle Offer"
         }
+
       ],
       "shop_Link": "https://homehaven.com",
       "category": "Home & Living",
@@ -154,6 +168,13 @@
           "expiry_date": "2024-12-25",
           "condition": "Free book must be of equal or lesser value.",
           "coupon_type": "Bundle Offer"
+        },
+        {
+          "coupon_code": "BUY2GET1GRDTG",
+          "description": "Buy 3 books and get 1 free.",
+          "expiry_date": "2024-12-14",
+          "condition": "Free book must be of equal or lesser value.",
+          "coupon_type": "Offer "
         }
       ],
       "shop_Link": "https://booknook.com",

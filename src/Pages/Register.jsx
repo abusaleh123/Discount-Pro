@@ -12,7 +12,7 @@ import { signInWithPopup } from "firebase/auth";
 
 
 const Register = () => {
-  const {createNewUser, setUser, showPassword, setShowPassword , setLoading, googleSignup } = useContext(AuthContext);
+  const {createNewUser, setUser, showPassword, setShowPassword , setLoading, googleSignup,updateProfiler } = useContext(AuthContext);
   const provider = new GoogleAuthProvider();
   const navigate = useNavigate();
  const handleRegister = (e) => {
@@ -41,8 +41,10 @@ const Register = () => {
     toast.success("Register Successful");
     setUser(result);
     setLoading(true);
-    navigate("/")
-    
+    updateProfiler({displayName: name, photoURL : photo})
+    .then(() => {
+      navigate("/")
+    })
  })
  .catch(error => {
   console.log( "Error", error.message)
@@ -53,9 +55,13 @@ const Register = () => {
  const signInWithGoogle = () => {
   googleSignup(auth, provider )
   .then((result) => {
-    console.log(result);
-    setUser(result)
-    navigate("/")
+  const user = result.user;
+  setUser({
+    ...user,
+    photoURL : user.photoURL ||" https://i.ibb.co.com/sJVY95W/2.png",
+  })
+  navigate("/")
+  return result
   })
   .catch((error) => {
     console.log("Error", error)
@@ -96,11 +102,11 @@ const Register = () => {
                   <span className="label-text">Password</span>
                 
                 </label>
-                <input type={!showPassword ? "text" : "password"} name="password" placeholder="Password" className="input input-bordered" required />
+                <input type={!showPassword ? "password" : "text"} name="password" placeholder="Password" className="input input-bordered" required />
                 <button 
                   type="button"
                 onClick={() => setShowPassword(!showPassword)}
-                className="  w-fit absolute top-1/2 right-3 transform bottom-2">{showPassword ? <FaEye />  :<FaEyeSlash />  }
+                className="  w-fit absolute top-1/2 right-3 transform bottom-2">{showPassword ?  <FaEyeSlash /> : <FaEye /> }
                 
                 </button>
                

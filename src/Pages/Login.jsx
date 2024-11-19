@@ -2,15 +2,16 @@ import React, { useContext } from 'react';
 import { AuthContext } from '../AuthProvider';
 import 'react-toastify/dist/ReactToastify.css';
 import { toast, ToastContainer } from "react-toastify";
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import google from '../../src/assets/google.png'
 import auth from '../firebase.init';
 import { GoogleAuthProvider } from 'firebase/auth';
 import { signInWithPopup } from 'firebase/auth';
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Login = () => {
 
-  const {loginUser, setUser, googleLogin} = useContext(AuthContext);
+  const {loginUser, setUser, googleLogin,  showPassword, setShowPassword} = useContext(AuthContext);
   const navigate = useNavigate();
   const provider = new GoogleAuthProvider()
 
@@ -66,14 +67,22 @@ const loginWithGoogle = () => {
                 <label className="label">
                   <span className="label-text">Password</span>
                 </label>
-                <input type="password" name='password' placeholder="password" className="input input-bordered" required />
+                <input type={!showPassword ? "password" : "text"} name='password' placeholder="password" className="input input-bordered" required />
+                <button 
+                  type="button"
+                onClick={() => setShowPassword(!showPassword)}
+                className="  w-fit absolute bottom-48 right-12 transform  ">{showPassword ?  <FaEyeSlash />   : <FaEye />}
+                
+                </button>
                 <label className="label">
                   <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                 </label>
+              
               </div>
               <div className="form-control mt-6">
                 <button className="btn bg-orange-400">Login</button>
               </div>
+              <p className="text-center mt-1">Already Have An Account? <Link to={"/register"}><span className="text-red-400 font-bold">Register</span></Link></p>
             </form>
           </div>
         </div>

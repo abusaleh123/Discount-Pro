@@ -11,6 +11,7 @@ import Login from "../Pages/Login";
 import PrivateRoute from "../PrivateRoute";
 import BrandDetails from "../Pages/BrandDetails";
 import MyProfile from "../Pages/MyProfile";
+import UpdateInformation from "../Pages/UpdateInformation";
 
     
     const router = createBrowserRouter([
@@ -45,6 +46,10 @@ import MyProfile from "../Pages/MyProfile";
         {
           path: "/my-profile",
           element: <MyProfile></MyProfile>
+        },
+        {
+          path: "/update",
+          element: <UpdateInformation></UpdateInformation>
         }
       ]
     },
