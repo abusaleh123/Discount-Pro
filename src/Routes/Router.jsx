@@ -40,7 +40,7 @@ import MyProfile from "../Pages/MyProfile";
           element: <PrivateRoute>
             <BrandDetails></BrandDetails>
           </PrivateRoute>,
-          loader: () => fetch("coupon.json")
+          loader: ({params}) => fetch(`/coupon.json`).then((res) => res.json())
         },
         {
           path: "/my-profile",

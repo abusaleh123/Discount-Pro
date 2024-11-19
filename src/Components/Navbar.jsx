@@ -62,7 +62,7 @@ const backgroundColor = location.pathname === "/brands" ? "bg-[#DE2C5C] w-full p
   <div className="navbar-end gap-4 ">
     <Link to={"/register"} className="btn btn-ghost text-lg border border-green-400"><CiUser className="text-green-400 font-bold text-2xl" />Register</Link>
     {
-      user ? <button onClick={logOut} className="btn  text-lg btn-primary">Log Out</button>: <Link to={"/login"} className="btn btn-ghost text-lg bg-orange-400">Login</Link>
+      user ? <button onClick={logOut} className="btn  text-lg bg-red-500">Log Out</button>: <Link to={"/login"} className="btn btn-ghost text-lg bg-orange-400">Login</Link>
     }
    
   </div>

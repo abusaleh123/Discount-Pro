@@ -43,7 +43,7 @@ const Brand = ({brand}) => {
           </div>
         }
        
-      <Link><button className='btn bg-[#DE2C5C] text-white mt-'>View Coupons</button></Link>
+      <Link to={`/brand/${_id}`}><button className='btn bg-[#DE2C5C] text-white mt-'>View Coupons</button></Link>
       </div>
 
         </div>

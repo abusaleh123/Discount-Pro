@@ -91,17 +91,19 @@ const Register = () => {
                 </label>
                 <input type="text" name="photo"  placeholder="Photo URL" className="input input-bordered" required />
               </div>
-              <div className="form-control">
+              <div className="form-control relative">
                 <label className="label">
                   <span className="label-text">Password</span>
-                  <button 
+                
+                </label>
+                <input type={!showPassword ? "text" : "password"} name="password" placeholder="Password" className="input input-bordered" required />
+                <button 
+                  type="button"
                 onClick={() => setShowPassword(!showPassword)}
-                className="absolute right-12  ">{showPassword ? <FaEye />  :<FaEyeSlash />  }
+                className="  w-fit absolute top-1/2 right-3 transform bottom-2">{showPassword ? <FaEye />  :<FaEyeSlash />  }
                 
                 </button>
                
-                </label>
-                <input type={!showPassword ? "text" : "password"} name="password" placeholder="Password" className="input input-bordered" required />
             
               </div>
               <div className="form-control mt-6">

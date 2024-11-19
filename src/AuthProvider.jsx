@@ -11,21 +11,26 @@ const [loading, setLoading] = useState(true);
 const [showPassword, setShowPassword] = useState(false);
 
 const createNewUser = (email, password) => {
+    setLoading(true)
     return createUserWithEmailAndPassword(auth, email, password)
 }
 const logOut = () => {
+    setLoading(true)
     return signOut(auth)
 }
 const googleSignup =(auth, provider) => {
+    setLoading(true)
     return signInWithPopup(auth, provider);
 }
 
 
 const loginUser = (email, password) => {
+    setLoading(true)
     return signInWithEmailAndPassword(auth, email, password)
 }
 
 const googleLogin = (auth, provider) => {
+    setLoading(true)
 return signInWithPopup(auth, provider)
 }
 
