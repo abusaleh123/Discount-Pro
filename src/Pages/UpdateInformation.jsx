@@ -26,12 +26,12 @@ const UpdateInformation = () => {
            <Helmet>
         <title>Update Profile - Discount pro</title>
       </Helmet>
-        <div className="hero-content flex-col lg:w-96" data-aos="flip-left" >
+        <div className="hero-content flex-col lg:w-96 " data-aos="flip-left" >
           <div className="text-center lg:text-left">
             <h1 className="text-5xl font-bold">Update Profile</h1>
           
           </div>
-          <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+          <div className="card bg-base-100 w-64 md:w-full  md:max-w-max shrink-0 shadow-2xl">
             <form onSubmit={handleUpdate} className="card-body">
               <div className="form-control">
                 <label className="label">
@@ -47,7 +47,7 @@ const UpdateInformation = () => {
                
               </div>
               <div className="form-control mt-6">
-                <button className="btn btn-ghost bg-orange-400 text-lg ">Update Information</button>
+                <button className="btn btn-ghost bg-orange-400 md:text-lg ">Update Information</button>
               </div>
             </form>
           </div>

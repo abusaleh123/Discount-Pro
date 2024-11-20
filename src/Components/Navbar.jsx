@@ -86,10 +86,10 @@ const textColor = location.pathname === "/brands" ? "text-white" : location.path
    {
     user ? <>
     <div className=" flex  justify-center items-center gap-2 mr-2 lg:mr-0">
-      <img className="w-10 h-10  rounded-full object-cover" src={user.photoURL} alt="" />
+      <img className="w-10 h-10 max-w-10 rounded-full object-cover" src={user.photoURL} alt="" />
      <div>
-     <h2 className=" md:text-lg font-bold">{user.displayName}</h2>
-     <h2 className="text-sm md:font-semibold">{user.email}</h2>
+     <h2 className=" md:text-lg hidden md:block font-bold">{user.displayName}</h2>
+     <h2 className="text-sm hidden md:block md:font-semibold">{user.email}</h2>
      </div>
     </div>
     </> :  <Link to={"/register"} className="btn md:flex  btn-ghost text-lg border   border-orange-400"><CiUser className="text-orange-400 flex font-bold text-2xl" />Register</Link>
