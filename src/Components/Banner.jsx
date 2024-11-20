@@ -3,6 +3,9 @@ import Marquee from "react-fast-marquee";
 import { Link } from 'react-router-dom';
 
 import Section from './Section';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+AOS.init();
 const Banner = () => {
     const [brands, setBrands] = useState([]);
     useEffect(() => {
@@ -15,7 +18,7 @@ const saleOn = brands.filter(isSale => isSale.isSaleOn)
         <div>
                 <section>
              {/* Banner */}
-<div className='bgimage  lg:w-10/12 mx-auto rounded-xl pt-20 pb-16 md:pb-40 px-10 mt-10 text-center  ' data-aos="fade-down"
+<div className='bgimage z-1 lg:w-10/12 mx-auto rounded-xl pt-20 pb-16 z-10 md:pb-40 px-10 mt-10 text-center  ' data-aos="fade-down"
  
     >
     <div className='flex flex-col justify-center items-center' >
@@ -38,7 +41,7 @@ const saleOn = brands.filter(isSale => isSale.isSaleOn)
        </div>
 
        <div className='mt-20 '>
-<h1 className="text-3xl mb-10 font-bold w-10/12 mx-auto">Brand with Active Status</h1>
+<h1 className="text-3xl mb-10 font-bold w-10/12 mx-auto">Brands on Sell</h1>
 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto w-10/12  gap-8 mb-20' >
 {
     saleOn.length > 0 ? saleOn.map((brand) => (

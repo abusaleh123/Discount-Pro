@@ -52,7 +52,7 @@ const loginWithGoogle = () => {
          <Helmet>
         <title>Login - Discount pro</title>
       </Helmet>
-        <div className="hero ">
+        <div className="hero " data-aos="zoom-out"> 
         <div className="hero-content flex-col ">
           <div className="text-center lg:text-left">
             <h1 className="text-5xl font-bold">Login now!</h1>
@@ -107,7 +107,7 @@ const loginWithGoogle = () => {
       
       <div className="">
       <div className="divider w-2/12 mx-auto divider-">OR</div>
-      <button onClick={loginWithGoogle} className="border lg:w-72 mx-auto py-1 px-2 rounded-full flex gap-6 items-center">
+      <button data-aos="zoom-in" onClick={loginWithGoogle} className="border lg:w-72 mx-auto py-1 px-2 rounded-full flex gap-6 items-center">
       <img className="w-10" src={google}  alt="" />
       <p className="md:text-lg">Continue With Google</p>
       </button>

@@ -3,6 +3,9 @@ import logo from '../../src/assets/hot-sale.png';
 import { CiUser } from "react-icons/ci";
 import { useContext } from "react";
 import { AuthContext } from "../AuthProvider";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+AOS.init();
 
 
 const Navbar = () => {
@@ -41,21 +44,21 @@ const textColor = location.pathname === "/brands" ? "text-white" : "text-normal"
             d="M4 6h16M4 12h8m-8 6h16" />
         </svg>
       </div>
-      <div className="menu menu-sm dropdown-content text-white bg-[#1C2D3D] rounded-box z-[1] mt-3 w-52 p-2 shadow">
+
       <ul
-        tabIndex={0}
+        tabIndex={0} className="menu menu-sm dropdown-content  text-white  bg-[#1C2D3D] rounded-box z-30 mt-3 w-52 p-2 shadow"
         >
         {
             links
         }
       </ul>
-      </div>
+
     </div> 
       <Link to={"/"}>
     <div className="flex justify-center items-center  ">
-        <img className="lg:w-16 w-8 object-cover sm:ml-6 md:ml-10 lg:ml-0 " src={logo} alt="" />
+        <img className="lg:w-16 w-8 object-cover lg:mb-4 ml-6 md:ml-10 lg:ml-0 " src={logo} alt="" />
     {
-      user ? <a className="btn btn-ghost hidden md:block text-3xl font-bold">Discount Pro</a> : <a className="btn btn-ghost  lg:text-3xl text-lg font-bold">Discount Pro</a>
+      user ? <a className="btn btn-ghost hidden md:block text-3xl font-bold">Discount Pro</a> : <a className="btn btn-ghost hidden lg:block lg:text-3xl text-lg font-bold">Discount Pro</a>
     }
     </div> 
     </Link>
@@ -94,7 +97,7 @@ const textColor = location.pathname === "/brands" ? "text-white" : "text-normal"
 
 <div>
 {
-      user ? <Link to={"/"} onClick={logOut} className="btn  md:text-lg items-center sm:w-24 md:w-28 lg:w-auto  btn-ghost border-orange-400">Log Out</Link>: <Link to={"/login"} className="btn btn-ghost  text-lg border border-orange-400">Login</Link>
+      user ? <Link to={"/"} onClick={logOut} className="btn  md:text-lg items-center w-24 md:w-28 lg:w-auto  btn-ghost border-orange-400">Log Out</Link>: <Link to={"/login"} className="btn btn-ghost  text-lg border border-orange-400">Login</Link>
     }
 </div>
   

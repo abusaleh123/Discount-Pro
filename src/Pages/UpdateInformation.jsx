@@ -26,7 +26,7 @@ const UpdateInformation = () => {
            <Helmet>
         <title>Update Profile - Discount pro</title>
       </Helmet>
-        <div className="hero-content flex-col lg:w-96">
+        <div className="hero-content flex-col lg:w-96" data-aos="flip-left" >
           <div className="text-center lg:text-left">
             <h1 className="text-5xl font-bold">Update Profile</h1>
           

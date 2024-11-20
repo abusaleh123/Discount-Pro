@@ -22,7 +22,7 @@ const Section = () => {
            <p className="mt-6 text-lg text-gray-400">
              We are dedicated to helping you save more and live better by simplifying access to discounts, deals, and exclusive offers across the biggest brands in Bangladesh.
            </p>
-           <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-6 mt-10" >
+           <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10" >
              <div className="p-6 bg-white rounded-xl shadow-md hover:shadow-lg" data-aos="flip-left"
      data-aos-easing="ease-out-cubic"
      data-aos-duration="2000">

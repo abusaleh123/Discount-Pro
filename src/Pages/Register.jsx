@@ -15,6 +15,7 @@ import { Helmet } from "react-helmet-async";
 const Register = () => {
   const {createNewUser, setUser, showPassword, setShowPassword , setLoading, googleSignup,updateProfiler } = useContext(AuthContext);
   const provider = new GoogleAuthProvider();
+  const [errorMessage, setErrorMessage] = useState("")
   const navigate = useNavigate();
  const handleRegister = (e) => {
   e.preventDefault();
@@ -28,11 +29,13 @@ const Register = () => {
     setLoading(true)
 
   if(password.length < 6){
-    return toast.error("Password Should be at least 6 character")
+    setErrorMessage("Password Should be at least 6 character")
+    return ;
   }
   const passwordRegex = /^(?=.*[A-Z])(?=.*[a-z]).{6,}$/;
   if(!passwordRegex.test(password)){
-    return toast.error("Password must have one uppercase and one lowercase")
+    setErrorMessage("At Least One Uppercase And One Lowercase")
+    return ;
   };
 
 
@@ -76,7 +79,7 @@ const Register = () => {
          <Helmet>
         <title>Register - Discount pro</title>
       </Helmet>
-        <div className="hero ">
+        <div className="hero " data-aos="zoom-out">
         <div className="hero-content flex-col ">
           <div className="text-center lg:text-left">
             <h1 className="md:text-4xl text-2xl text-start font-bold">Register Now</h1>
@@ -114,8 +117,11 @@ const Register = () => {
                 
                 </button>
                
-            
+           
               </div>
+              {
+              errorMessage && <p className="text-red-500">{errorMessage}</p>
+            }
               <div className="form-control mt-6">
                <button className="btn bg-orange-400 text-lg ">Register </button>
               </div>
@@ -140,7 +146,7 @@ const Register = () => {
 
       <div className="">
       <div className="divider w-2/12 mx-auto divider-">OR</div>
-      <button onClick={signInWithGoogle} className="border  lg:w-72 mx-auto py-1 px-2 rounded-full flex gap-6 items-center">
+      <button data-aos="zoom-in" onClick={signInWithGoogle} className="border  lg:w-72 mx-auto py-1 px-2 rounded-full flex gap-6 items-center">
       <img className="w-10" src={google} alt="" />
       <p className="text-lg">Continue With Google</p>
       </button>

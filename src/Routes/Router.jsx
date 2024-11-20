@@ -52,7 +52,9 @@ import ErrorPage from "../Components/ErrorPage";
         },
         {
           path: "/my-profile",
-          element: <MyProfile></MyProfile>
+          element: <PrivateRoute>
+            <MyProfile></MyProfile>
+          </PrivateRoute>
         },
         {
           path: "/update",
