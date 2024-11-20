@@ -11,10 +11,10 @@ const AboutDev = () => {
   return (
     <div>
     
-  <div className="min-h-screen bg-gray-900 text-white relative pb-10">
+  <div className="min-h-screen bg-gray-900 text-white relative pb-10" data-aos="fade-up">
       <div className="absolute inset-0 bg-gradient-to-tr from-purple-900 via-gray-900 to-black opacity-90"></div>
 
-      <div className="relative z-10 flex flex-col items-center justify-center py-16 md:py-28 px-6 text-center">
+      <div className="relative z-10 flex flex-col items-center justify-center py-16 md:py-28 px-6 text-center" data-aos="zoom-in">
         <img className='w-96 rounded-full h-96 object-cover mb-4' src={profile} alt="" />
         <h1 className="text-5xl md:text-7xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">
           Abu Saleh Noor
@@ -26,7 +26,7 @@ const AboutDev = () => {
           Language Proficiency: Bangla, English, Hindi
         </p>
 
-        {/* Skills Section */}
+
         <div className="mt-8">
           <h2 className="text-2xl font-bold text-gray-300">Skills</h2>
           <div className="mt-4 grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -42,7 +42,7 @@ const AboutDev = () => {
         </div>
       </div>
 
-      {/* Project Section */}
+
       <div className="relative z-10 bg-gray-800 bg-opacity-90 rounded-xl max-w-6xl mx-auto p-8 shadow-2xl mt-12">
         <h2 className="text-3xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-yellow-500">
           Projects
@@ -63,7 +63,7 @@ const AboutDev = () => {
         </ul>
       </div>
 
-      {/* Call to Action */}
+
       <div className="relative z-10 text-center mt-12 mb-12">
         <button onClick={()=>document.getElementById('my_modal_1').showModal()} className="px-8 py-3 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 hover:to-yellow-500 text-white font-bold shadow-lg hover:scale-105 transform transition duration-300">
           Contact Me
@@ -78,7 +78,7 @@ const AboutDev = () => {
 
     {/* Modal */}
    
-<dialog id="my_modal_1" className="modal">
+<dialog id="my_modal_1" className="modal" >
 <div class="fixed inset-0 z-50  flex items-center justify-center bg-black bg-opacity-50">
 
   <div class="relative bg-gray-800 py-6 px-4 rounded-2xl shadow-2xl w-11/12 md:w-2/3 lg:w-1/2">

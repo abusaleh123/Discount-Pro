@@ -11,8 +11,8 @@ AOS.init();
 const Navbar = () => {
   const location = useLocation();
 const {user, logOut} = useContext(AuthContext);
-const backgroundColor = location.pathname === "/brands" ? "bg-[#0F1821] w-full py-6 "  :"bg-white";
-const textColor = location.pathname === "/brands" ? "text-white" : "text-normal";
+const backgroundColor = location.pathname === "/brands" ? "bg-[#0F1821] w-full py-6 " : location.pathname === "/about" ? "bg-[#0F1821]": "bg-white";
+const textColor = location.pathname === "/brands" ? "text-white" : location.pathname === "/about" ? "text-white" : "text-normal";
     const links = <>
     <li className="text-lg font-semibold"><Link to={"/"}>Home</Link></li>
     <li className="text-lg font-semibold"><Link to={"/brands"}>Brands</Link></li>
