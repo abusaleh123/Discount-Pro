@@ -21,10 +21,11 @@ const backgroundColor = location.pathname === "/brands" ? "bg-[#DE2C5C] w-full p
         
     </>
     return (
-       <div className={`py-4 ${backgroundColor}`}>
+       <div className={`py-4 ${backgroundColor} ` } data-aos="fade-up"
+       >
          <div className={`navbar w-11/12 ${backgroundColor} mx-auto`}>
   <div className="navbar-start">
-    <div className="dropdown">
+    <div className="dropdown" >
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -84,7 +85,7 @@ const backgroundColor = location.pathname === "/brands" ? "bg-[#DE2C5C] w-full p
     </> :  <Link to={"/register"} className="btn btn-ghost text-lg border border-green-400"><CiUser className="text-green-400 font-bold text-2xl" />Register</Link>
    }
     {
-      user ? <button onClick={logOut} className="btn  text-lg bg-red-500">Log Out</button>: <Link to={"/login"} className="btn btn-ghost text-lg bg-orange-400">Login</Link>
+      user ? <Link to={"/"} onClick={logOut} className="btn  text-lg bg-red-500">Log Out</Link>: <Link to={"/login"} className="btn btn-ghost text-lg bg-orange-400">Login</Link>
     }
    
   </div>

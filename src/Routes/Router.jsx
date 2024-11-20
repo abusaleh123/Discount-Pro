@@ -12,6 +12,7 @@ import PrivateRoute from "../PrivateRoute";
 import BrandDetails from "../Pages/BrandDetails";
 import MyProfile from "../Pages/MyProfile";
 import UpdateInformation from "../Pages/UpdateInformation";
+import ForgotPassword from "../Pages/ForgotPassword";
 
     
     const router = createBrowserRouter([
@@ -35,6 +36,10 @@ import UpdateInformation from "../Pages/UpdateInformation";
         {
           path: "/login",
           element: <Login></Login>
+        },
+        {
+          path: "/reset-password",
+          element: <ForgotPassword></ForgotPassword>
         },
         {
           path: "/brand/:id",

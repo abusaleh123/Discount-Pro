@@ -11,7 +11,7 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Login = () => {
 
-  const {loginUser, setUser, googleLogin,  showPassword, setShowPassword} = useContext(AuthContext);
+  const {loginUser, setUser, googleLogin,  showPassword, setShowPassword, email, setEmail} = useContext(AuthContext);
   const navigate = useNavigate();
   const provider = new GoogleAuthProvider()
 
@@ -61,7 +61,9 @@ const loginWithGoogle = () => {
                 <label className="label">
                   <span className="label-text">Email</span>
                 </label>
-                <input type="email" name='email' placeholder="email" className="input input-bordered" required />
+                <input type="email" name='email' placeholder="email" className="input input-bordered" 
+                onChange={(e) => setEmail(e.target.value)}
+                required />
               </div>
               <div className="form-control">
                 <label className="label">
@@ -75,10 +77,10 @@ const loginWithGoogle = () => {
                 
                 </button>
                 <label className="label">
-                  <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
+                  <Link to={"/reset-password"} className="label-text-alt link link-hover">Forgot password?</Link>
                 </label>
               
-              </div>
+              </div>  
               <div className="form-control mt-6">
                 <button className="btn bg-orange-400">Login</button>
               </div>

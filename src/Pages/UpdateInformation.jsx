@@ -1,9 +1,11 @@
 import { useContext } from "react";
 import { AuthContext } from "../AuthProvider";
+import { Link, useNavigate } from "react-router-dom";
 
 
 const UpdateInformation = () => {
-    const {updateProfiler, setUser} = useContext(AuthContext)
+    const {updateProfiler, setUser, setLoading} = useContext(AuthContext);
+    const navigate = useNavigate()
     const handleUpdate = (e) => {
         e.preventDefault();
         const name = e.target.name.value;
@@ -11,7 +13,11 @@ const UpdateInformation = () => {
         updateProfiler({displayName: name, photoURL : photo})
         .then((result) => {
             setUser(result)
+            setLoading(true)
           navigate("/my-profile")
+        })
+        .catch(error => {
+          console.log("Error", error.message);
         })
     }
     return (
