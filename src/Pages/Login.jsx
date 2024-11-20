@@ -57,7 +57,7 @@ const loginWithGoogle = () => {
           <div className="text-center lg:text-left">
             <h1 className="text-5xl font-bold">Login now!</h1>
           </div>
-          <div className="card bg-base-100 w-full max-w-sm shrink-0 border border-orange-300 ">
+          <div className="card bg-base-100 w-64 md:w-full  md:max-w-max shrink-0 border border-orange-300 ">
             <form onSubmit={handleLogin} className="card-body">
               <div className="form-control">
                 <label className="label">
@@ -75,7 +75,7 @@ const loginWithGoogle = () => {
                 <button 
                   type="button"
                 onClick={() => setShowPassword(!showPassword)}
-                className="  w-fit absolute bottom-48 right-12 transform  ">{showPassword ?  <FaEyeSlash />   : <FaEye />}
+                className="  w-fit absolute md:bottom-48 md:right-12 right-12 bottom-[220px] transform  ">{showPassword ?  <FaEyeSlash />   : <FaEye />}
                 
                 </button>
                 <label className="label">

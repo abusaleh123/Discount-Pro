@@ -84,7 +84,7 @@ const Register = () => {
           <div className="text-center lg:text-left">
             <h1 className="md:text-4xl text-2xl text-start font-bold">Register Now</h1>
           </div>
-          <div className="card bg-base-100 w-96 max-w-sm shrink-0 border border-orange-400 ">
+          <div className="card bg-base-100 w-64 md:w-full  md:max-w-max shrink-0 border border-orange-400 ">
             <form onSubmit={handleRegister} className="card-body">
               <div className="form-control">
                 <label className="label">

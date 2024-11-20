@@ -40,7 +40,7 @@ const Brand = ({brand}) => {
      <div className='md:flex  justify-center items-end lg:justify-start gap-2 mt-4'>
     
        
-      <Link to={`/brand/${_id}`}><button className='btn btn-ghost mb-8 md:mb-0 border-orange-400 text-lg '>View Coupons</button></Link>
+      <Link to={`/brand/${_id}`}><button className='btn btn-ghost mb-8 md:mb-0 border-orange-400 md:text-lg '>View Coupons</button></Link>
       {
           isSaleOn && <div >
             <p className="animate-bounce  text-red-500">Sale Is On</p>
