@@ -24,11 +24,11 @@ const ForgotPassword = () => {
         
     }
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-100">
+        <div className=" min-h-96 flex items-center justify-center ">
            <Helmet>
         <title>Forgot Password - Discount pro</title>
       </Helmet>
-      <div className="bg-white p-8 rounded-lg shadow-lg w-96">
+      <div className="bg-white p-8 rounded-lg shadow-lg w-96" data-aos="flip-left">
         <h2 className="text-2xl font-bold text-gray-800 mb-6">Forgot Password</h2>
         <form >
           <div className="mb-4">

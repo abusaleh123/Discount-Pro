@@ -17,7 +17,7 @@ const MyProfile = () => {
           
           <div>
 
-      <div className="bg-cover bg-center " style={{ backgroundImage: `url(${image})` }}>
+      <div className="bg-cover bg-center " style={{ backgroundImage: `url(${image})` }} data-aos="zoom-in">
         <div className="flex justify-center items-center h-full bg-black pt-16 pb-24 bg-opacity-50">
           {
             user && <div className='text-center mx-auto justify-center flex flex-col items-center'>
@@ -28,9 +28,9 @@ const MyProfile = () => {
         </div>
       </div>
 
-      <div className="container mx-auto p-6 mt-16 ">
-        <div className="md:max-w-4xl md:text-center mx-auto bg-white p-6 rounded-lg border-orange-400 border">
-          <div className=" text-center space-x-6">
+      <div className="container mx-auto p-6 mt-16 " >
+        <div className="md:max-w-4xl md:text-center mx-auto bg-white p-6 rounded-lg border-orange-400 border" data-aos="zoom-out" >
+          <div className=" text-center space-x-6" data-aos="flip-left" >
             <img src={user && user.photoURL} alt="User Photo" className="w-52 h-52 md: mx-auto  object-cover rounded-full" />
             <div>
               <h2 className="text-2xl font-semibold text-gray-800 mb-2">Name: {user && user.displayName}</h2>

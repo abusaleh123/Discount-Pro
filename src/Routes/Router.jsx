@@ -14,6 +14,7 @@ import MyProfile from "../Pages/MyProfile";
 import UpdateInformation from "../Pages/UpdateInformation";
 import ForgotPassword from "../Pages/ForgotPassword";
 import ErrorPage from "../Components/ErrorPage";
+import AboutDev from "../Pages/AboutDev";
 
     
     const router = createBrowserRouter([
@@ -59,6 +60,10 @@ import ErrorPage from "../Components/ErrorPage";
         {
           path: "/update",
           element: <UpdateInformation></UpdateInformation>
+        },
+        {
+          path: "/about",
+          element: <AboutDev></AboutDev>
         }
       ]
     },
