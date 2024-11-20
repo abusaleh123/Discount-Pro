@@ -21,7 +21,7 @@ const saleOn = brands.filter(isSale => isSale.isSaleOn)
     <div className='flex flex-col justify-center items-center' >
 <h1 className='  text-white text-6xl w-6/12 font-bold leading-tight' >Your One-Stop Destination for Incredible Discounts!</h1>
 <p className=  ' text-white w-2/4 text-center mt-4'>Discount PRO simplifies savings by collecting coupons from top Bangladeshi e-commerce stores, enabling users to browse, copy, and redeem discounts effortlessly.</p>
-<button className='btn mt-6 btn-ghost bg-purple-300 text-xl'>See Below</button>
+<Link to={"/brands"} className='btn mt-6 btn-ghost border-orange-300 text-xl text-white'>See All</Link>
     </div>
 </div>
             {/* Banner */}

@@ -43,7 +43,7 @@ const {brand_logo, shop_Link} = details;
 
   
 
-        <button  onClick={() => window.open(shop_Link, "_blank")} className="w-full py-2 mt-2 btn btn-primary rounded-md transition">
+        <button  onClick={() => window.open(shop_Link, "_blank")} className="w-full py-2 mt-2 btn btn-ghost border bg-orange-400  transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 hover:bg-orange-300 duration-300 rounded-md text-lg">
           Use Now
         </button>
       </div>

@@ -17,7 +17,7 @@ const UpdateInformation = () => {
           navigate("/my-profile")
         })
         .catch(error => {
-          console.log("Error", error.message);
+          // console.log("Error", error.message);
         })
     }
     return (
@@ -43,7 +43,7 @@ const UpdateInformation = () => {
                
               </div>
               <div className="form-control mt-6">
-                <button className="btn btn-accent">Update Information</button>
+                <button className="btn btn-ghost bg-orange-400 text-lg ">Update Information</button>
               </div>
             </form>
           </div>

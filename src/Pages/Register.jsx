@@ -21,7 +21,7 @@ const Register = () => {
   const email = e.target.email.value;
   const photo = e.target.photo.value;
   const password = e.target.password.value;
-  console.log(name,email,photo, password);
+  // console.log(name,email,photo, password);
     setUser("")
     createNewUser("")
     setLoading(true)
@@ -37,7 +37,7 @@ const Register = () => {
 
   createNewUser(email, password)
   .then((result) => {
-    console.log(result)
+    // console.log(result)
     toast.success("Register Successful");
     setUser(result);
     setLoading(true);
@@ -47,7 +47,7 @@ const Register = () => {
     })
  })
  .catch(error => {
-  console.log( "Error", error.message)
+  // console.log( "Error", error.message)
   toast.error(error.message || "Failed")
  })
 
@@ -64,7 +64,7 @@ const Register = () => {
   return result
   })
   .catch((error) => {
-    console.log("Error", error)
+    // console.log("Error", error)
     toast.error( error.message || "Sign In Failed")
   })
  }
@@ -77,7 +77,7 @@ const Register = () => {
           <div className="text-center lg:text-left">
             <h1 className="md:text-4xl text-2xl text-start font-bold">Register Now</h1>
           </div>
-          <div className="card bg-base-100 w-96 max-w-sm shrink-0 border border-green-400 ">
+          <div className="card bg-base-100 w-96 max-w-sm shrink-0 border border-orange-400 ">
             <form onSubmit={handleRegister} className="card-body">
               <div className="form-control">
                 <label className="label">
@@ -113,7 +113,7 @@ const Register = () => {
             
               </div>
               <div className="form-control mt-6">
-               <button className="btn bg-green-400 text-lg ">Register </button>
+               <button className="btn bg-orange-400 text-lg ">Register </button>
               </div>
               <p className="text-center mt-1">Already Have An Account? <Link to={"/login"}><span className="text-red-400 font-bold">Login</span></Link></p>
             </form>

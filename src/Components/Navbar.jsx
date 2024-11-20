@@ -8,22 +8,23 @@ import { AuthContext } from "../AuthProvider";
 const Navbar = () => {
   const location = useLocation();
 const {user, logOut} = useContext(AuthContext);
-const backgroundColor = location.pathname === "/brands" ? "bg-[#DE2C5C] w-full py-6 " : "bg-white";
+const backgroundColor = location.pathname === "/brands" ? "bg-[#0F1821] w-full py-6 "  :"bg-white";
+const textColor = location.pathname === "/brands" ? "text-white" : "text-normal";
     const links = <>
     <li className="text-lg font-semibold"><Link to={"/"}>Home</Link></li>
     <li className="text-lg font-semibold"><Link to={"/brands"}>Brands</Link></li>
    {
     user && <>
-     <li className="text-lg font-semibold"><NavLink to={"/my-profile"}>My Profile</NavLink></li>
+     <li className="text-lg font-semibold"><Link to={"/my-profile"}>My Profile</Link></li>
     </>
    }
     <li className="text-lg font-semibold"><Link to={"/about"}>About Dev</Link></li>
         
     </>
     return (
-       <div className={`py-4 ${backgroundColor} ` } data-aos="fade-up"
+       <div className={`py-4 ${backgroundColor} ${textColor} ` } 
        >
-         <div className={`navbar w-11/12 ${backgroundColor} mx-auto`}>
+         <div className={`navbar w-11/12  mx-auto`} data-aos="fade-up">
   <div className="navbar-start">
     <div className="dropdown" >
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -82,10 +83,10 @@ const backgroundColor = location.pathname === "/brands" ? "bg-[#DE2C5C] w-full p
      <h2 className="text-sm font-semibold">{user.email}</h2>
      </div>
     </div>
-    </> :  <Link to={"/register"} className="btn btn-ghost text-lg border border-green-400"><CiUser className="text-green-400 font-bold text-2xl" />Register</Link>
+    </> :  <Link to={"/register"} className="btn btn-ghost text-lg border border-orange-400"><CiUser className="text-orange-400 font-bold text-2xl" />Register</Link>
    }
     {
-      user ? <Link to={"/"} onClick={logOut} className="btn  text-lg bg-red-500">Log Out</Link>: <Link to={"/login"} className="btn btn-ghost text-lg bg-orange-400">Login</Link>
+      user ? <Link to={"/"} onClick={logOut} className="btn  text-lg btn-ghost border-orange-400">Log Out</Link>: <Link to={"/login"} className="btn btn-ghost text-lg border border-orange-400">Login</Link>
     }
    
   </div>

@@ -15,7 +15,7 @@ const Login = () => {
   const navigate = useNavigate();
   const provider = new GoogleAuthProvider()
 
-console.log(auth, provider);
+// console.log(auth, provider);
 
     const handleLogin = (e) => {
         e.preventDefault();
@@ -26,25 +26,23 @@ console.log(auth, provider);
 
         loginUser(email, password)
         .then((result) => {
-          console.log(result);
+
           setUser(result);
           toast.success("Sign In Success");
           navigate("/")
         })
         .catch(error  => {
-          console.log("Error" , error.message);
+          // console.log("Error" , error.message);
           toast.error("Sign In Failed")
         })
 }
 const loginWithGoogle = () => {
   googleLogin(auth, provider)
   .then((result) => {
-    console.log(result);
     setUser(result)
     navigate("/")
   })
   .catch((error) => {
-    console.log("Error", error)
     toast.error( error.message || "Sign In Failed")
   })
  }

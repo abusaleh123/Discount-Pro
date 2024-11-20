@@ -7,16 +7,16 @@ const Brand = ({brand}) => {
     //   return
     // }
     return (
-       <div className=' w-full rounded-xl flex gap-12 items-center text-start  hover:border-green-300 border-2 p-6 '>
+       <div className=' w-full rounded-xl md:flex gap-12 items-center md:text-start  hover:border-orange-300 border-2 p-6 '>
         <div>
-          <img className='w-96 rounded-xl border transition ease-in-out delay-150  hover:origin-top hover:rotate-8' src={brand_logo} alt="" />
+          <img className='md:w-96 mb-4 rounded-xl border transition ease-in-out delay-150  hover:origin-top hover:rotate-8' src={brand_logo} alt="" />
         </div>
         <div className=''>
           <h1 className='md:text-3xl font-bold'>{brand_name}</h1>
           <h2 className="font-bold mt-4 mb-1">Rating</h2>
 
-    <div className='flex gap-2 items-center'>
-    <div className="rating rating-md">
+    <div className='flex w-full mx-auto text-center gap-2 items-center justify-center md:justify-normal'>
+    <div className="rating rating-md ">
   <input type="radio" name="rating-7" className="mask mask-star-2 bg-orange-400" />
   <input
     type="radio"
@@ -37,13 +37,16 @@ const Brand = ({brand}) => {
       <div>
         <p className="text-gray-400 mt-4">{description}</p>
         <p className='my-2'>Coupon Category: <span className='font-bold'> {category}</span></p>
-        {
-          isSaleOn && <div>
-            <p className="animate-bounce mt-3 md:ml-6 text-red-500">Sale Is On</p>
+     <div className='md:flex  items-end justify-start gap-2 mt-4'>
+    
+       
+      <Link to={`/brand/${_id}`}><button className='btn btn-ghost mb-8 md:mb-0 border-orange-400 text-lg '>View Coupons</button></Link>
+      {
+          isSaleOn && <div >
+            <p className="animate-bounce  text-red-500">Sale Is On</p>
           </div>
         }
-       
-      <Link to={`/brand/${_id}`}><button className='btn bg-[#DE2C5C] text-white mt-'>View Coupons</button></Link>
+     </div>
       </div>
 
         </div>

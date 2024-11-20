@@ -13,11 +13,13 @@ import BrandDetails from "../Pages/BrandDetails";
 import MyProfile from "../Pages/MyProfile";
 import UpdateInformation from "../Pages/UpdateInformation";
 import ForgotPassword from "../Pages/ForgotPassword";
+import ErrorPage from "../Components/ErrorPage";
 
     
     const router = createBrowserRouter([
     {
       path: "/",
+      errorElement: <ErrorPage></ErrorPage>,
       element: <Home></Home>,
       children: [
         {

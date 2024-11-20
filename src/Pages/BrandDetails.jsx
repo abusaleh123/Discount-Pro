@@ -6,7 +6,6 @@ const BrandDetails = () => {
     const data = useLoaderData();
     const {id} = useParams();
 
-    // console.log(data);
 
     const details = data.find((brand) => brand._id === id);
 
@@ -17,7 +16,6 @@ const BrandDetails = () => {
 const {brand_name, brand_logo, rating, coupons} = details;
 
 
-console.log(details.coupons);
     return (
         <div className='flex flex-col items-center'>
           <img className='lg:w-72 w-40 rounded-xl mb-4' src={brand_logo} alt="" />

@@ -36,6 +36,7 @@ return signInWithPopup(auth, provider)
 }
 
 const updateProfiler = (updatedProfile) => {
+    setLoading(true)
     return updateProfile(auth.currentUser, updatedProfile);
 }
 const resetPassword = (auth, email) => {
@@ -51,8 +52,6 @@ useEffect( () => {
       }
   }, [])
 
-
-console.log(user);
 
 
     const authInfo = {
