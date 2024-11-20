@@ -1,8 +1,35 @@
-# React + Vite
+# Discount Pro
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Purpose: 
 
-Currently, two official plugins are available:
+- The purpose of Discount Pro website is to offer exclusive deals, discounts, and promotions, helping users save money on purchases.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Live URL : https://discount-pro-coupon-collecting.web.app/
+
+
+## Key Features: 
+
+- Comprehensive Coupon Collection.
+- User Authentication with Firebase
+- Private Routes
+- Responsive Design
+- Dynamic Brand Pages
+- Modern UI and Animations
+- User Profile Management
+- Secure Environment Configuration
+
+## NPM Packages: 
+
+- React Router DOM
+- Firebase
+- AOS (Animate on Scroll)
+- React Toastify
+- React Copy to Clipboard
+- React Icons
+- React Fast Marquee
+##
+#
+
+Discount PRO simplifies finding coupons, saving money, and enhancing online shopping convenience in Bangladesh.
+
+
