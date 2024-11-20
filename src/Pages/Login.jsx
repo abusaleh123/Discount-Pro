@@ -8,6 +8,7 @@ import auth from '../firebase.init';
 import { GoogleAuthProvider } from 'firebase/auth';
 import { signInWithPopup } from 'firebase/auth';
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { Helmet } from 'react-helmet-async';
 
 const Login = () => {
 
@@ -48,6 +49,9 @@ const loginWithGoogle = () => {
  }
     return (
       <div>
+         <Helmet>
+        <title>Login - Discount pro</title>
+      </Helmet>
         <div className="hero ">
         <div className="hero-content flex-col ">
           <div className="text-center lg:text-left">
@@ -103,9 +107,9 @@ const loginWithGoogle = () => {
       
       <div className="">
       <div className="divider w-2/12 mx-auto divider-">OR</div>
-      <button onClick={loginWithGoogle} className="border w-52 lg:w-72 mx-auto py-1 px-2 rounded-full flex gap-6 items-center">
+      <button onClick={loginWithGoogle} className="border lg:w-72 mx-auto py-1 px-2 rounded-full flex gap-6 items-center">
       <img className="w-10" src={google}  alt="" />
-      <p className="text-lg">Continue With Google</p>
+      <p className="md:text-lg">Continue With Google</p>
       </button>
       </div>
       </div>

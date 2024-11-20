@@ -1,10 +1,14 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useNavigate } from 'react-router-dom';
 
 const ErrorPage = () => {
     const navigate = useNavigate();
     return (
         <div>
+           <Helmet>
+        <title>Error - Page Not Found</title>
+      </Helmet>
              <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <div className="text-center">
         <h1 className="text-6xl font-bold text-black">404</h1>

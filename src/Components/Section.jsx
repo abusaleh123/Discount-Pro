@@ -22,7 +22,7 @@ const Section = () => {
            <p className="mt-6 text-lg text-gray-400">
              We are dedicated to helping you save more and live better by simplifying access to discounts, deals, and exclusive offers across the biggest brands in Bangladesh.
            </p>
-           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mt-10" >
+           <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-6 mt-10" >
              <div className="p-6 bg-white rounded-xl shadow-md hover:shadow-lg" data-aos="flip-left"
      data-aos-easing="ease-out-cubic"
      data-aos-duration="2000">
@@ -100,7 +100,7 @@ const Section = () => {
                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
                  />
                  <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-center">
-                    <h1 className="text-6xl text-white font-bold mb-6">Electronics</h1>
+                    <h1 className="lg:text-6xl text-white font-bold mb-6">Electronics</h1>
                    <h2 className="text-white text-xl mb-2 font-semibold">Exclusive Discounts on Electronics</h2>
                    <p className="text-gray-300">Get up to 40% off on top electronics brands. Limited time offer!</p>
                    <p className='text-gray-300 mt-2'>Showcase exclusive deals to entice users.</p>
@@ -117,7 +117,7 @@ const Section = () => {
                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
                  />
                  <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-center">
-                    <h1 className="text-5xl text-white font-bold mb-6">Seasonal Campaign</h1>
+                    <h1 className="lg:text-5xl text-white font-bold mb-6">Seasonal Campaign</h1>
                    <h2 className="text-white text-xl mb-2 font-semibold">Seasonal Savings Event</h2>
                    <p className="text-gray-300">Discover unbeatable discounts for the winter season. Stay warm and save more!</p>
                    <p className='text-gray-300 mt-2'>Promote seasonal campaigns.</p>
@@ -135,7 +135,7 @@ const Section = () => {
                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
                  />
                  <div className="absolute inset-0 bg-black bg-opacity-70 opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-center">
-                    <h1 className="text-4xl text-white font-bold mb-6">Popular Brands Showcase</h1>
+                    <h1 className="lg:text-4xl text-white font-bold mb-6">Popular Brands Showcase</h1>
                    <h2 className="text-white text-xl mb-2 font-semibold">Shop from Top Brands</h2>
                    <p className="text-gray-300 ">Find amazing deals from your favorite brands, all in one place.</p>
                    <p className='text-gray-300 mt-2'>Highlight the variety of brands available on the platform.</p>
@@ -149,10 +149,10 @@ const Section = () => {
          <div className="relative overflow-hidden rounded-lg shadow-md hover:shadow-lg" >
                  <img
                    src={coupon}
-                   className="w-full h-[460px] object-cover hover:scale-110 transition-transform duration-300"
+                   className="w-full h-[250px] lg:h-[460px] object-cover hover:scale-110 transition-transform duration-300"
                  />
                  <div className="absolute inset-0 bg-black bg-opacity-70 opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-center">
-                    <h1 className="text-5xl text-white font-bold mb-6">Coupon of the Day</h1>
+                    <h1 className="lg:text-5xl text-white font-bold mb-6">Coupon of the Day</h1>
                    <h2 className="text-white text-xl mb-2 font-semibold">Today's Top Coupon</h2>
                    <p className="text-gray-300">Save an extra 20% with this exclusive coupon. Don't miss out!</p>
                    <p className='text-gray-300 mt-2'>Encourage immediate action by featuring time-sensitive coupons..</p>
@@ -169,7 +169,7 @@ const Section = () => {
                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
                  />
                  <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-center">
-                    <h1 className="text-6xl text-white font-bold mb-6">Limited-Time Flash Sale</h1>
+                    <h1 className="lg:text-6xl text-white font-bold mb-6">Limited-Time Flash Sale</h1>
                    <h2 className="text-white text-xl mb-2 font-semibold">Flash Sale: Ends Soon!</h2>
                    <p className="text-gray-300">Grab exclusive discounts before the time runs out. Shop now!</p>
                    <p className='text-gray-300 mt-2'>Add urgency to encourage immediate purchases.</p>
@@ -186,7 +186,7 @@ const Section = () => {
                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
                  />
                  <div className="absolute inset-0 bg-black bg-opacity-70 opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-center" >
-                    <h1 className="text-6xl text-white font-bold mb-6">Trending Deals</h1>
+                    <h1 className="lg:text-6xl text-white font-bold mb-6">Trending Deals</h1>
                    <h2 className="text-white text-xl mb-2 font-semibold">Trending Now</h2>
                    <p className="text-gray-300">Explore the hottest deals of the season. Get them before they're gone!</p>
                    <p className='text-gray-300 mt-2'>Showcase popular, in-demand products.</p>

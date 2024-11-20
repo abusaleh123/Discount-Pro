@@ -8,7 +8,7 @@ const Footer = () => {
     window.open('https://x.com/MdAbuSalehNoor1', "_blank")
   }
     return (
-        <footer className="footer footer-center bg-[#0F1821] text-primary-content py-20 px-10 mt-20">
+        <footer className="footer footer-center bg-[#0F1821] text-primary-content py-20 px-10 mt-20 ">
         <aside>
         <img className='w-20' src={logo} alt="" />
           <p className="font-bold">

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
 import CouponCard from '../Components/CouponCard';
+import { Helmet } from 'react-helmet-async';
 
 const BrandDetails = () => {
     const data = useLoaderData();
@@ -18,6 +19,9 @@ const {brand_name, brand_logo, rating, coupons} = details;
 
     return (
         <div className='flex flex-col items-center'>
+             <Helmet>
+        <title>Brand Details - Discount pro</title>
+      </Helmet>
           <img className='lg:w-72 w-40 rounded-xl mb-4' src={brand_logo} alt="" />
           <h1 className='lg:text-7xl text-4xl font-bold'>{brand_name}</h1>
           <p className='text-2xl mt-4'>Rating: <span className='text-red-400'> {rating}/5</span></p>

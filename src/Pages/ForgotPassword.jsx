@@ -5,6 +5,7 @@ import { sendPasswordResetEmail } from 'firebase/auth';
 import 'react-toastify/dist/ReactToastify.css';
 import { toast, ToastContainer } from "react-toastify";
 import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 const ForgotPassword = () => {
     const {resetPassword, email, setUser} = useContext(AuthContext);
@@ -24,6 +25,9 @@ const ForgotPassword = () => {
     }
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-100">
+           <Helmet>
+        <title>Forgot Password - Discount pro</title>
+      </Helmet>
       <div className="bg-white p-8 rounded-lg shadow-lg w-96">
         <h2 className="text-2xl font-bold text-gray-800 mb-6">Forgot Password</h2>
         <form >
@@ -31,7 +35,7 @@ const ForgotPassword = () => {
             <label className="block text-gray-600 mb-2">Email</label>
             <input
               type="email"
-              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-1  focus:ring-orange-500"
               value={email}
               readOnly
             //   onChange={(e) => setEmail(e.target.value)}
@@ -40,7 +44,7 @@ const ForgotPassword = () => {
           </div>
           <button
             type="button"
-            className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition"
+            className="w-full bg-orange-400 text-lg py-2 rounded-lg  transition"
             onClick={handleResetPassword}
           >
             Reset Password

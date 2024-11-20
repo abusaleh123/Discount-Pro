@@ -9,6 +9,7 @@ import google from '../../src/assets/google.png'
 import { GoogleAuthProvider } from "firebase/auth";
 import auth from "../firebase.init";
 import { signInWithPopup } from "firebase/auth";
+import { Helmet } from "react-helmet-async";
 
 
 const Register = () => {
@@ -72,6 +73,9 @@ const Register = () => {
 
     return (
       <div>
+         <Helmet>
+        <title>Register - Discount pro</title>
+      </Helmet>
         <div className="hero ">
         <div className="hero-content flex-col ">
           <div className="text-center lg:text-left">
@@ -136,7 +140,7 @@ const Register = () => {
 
       <div className="">
       <div className="divider w-2/12 mx-auto divider-">OR</div>
-      <button onClick={signInWithGoogle} className="border w-52 lg:w-72 mx-auto py-1 px-2 rounded-full flex gap-6 items-center">
+      <button onClick={signInWithGoogle} className="border  lg:w-72 mx-auto py-1 px-2 rounded-full flex gap-6 items-center">
       <img className="w-10" src={google} alt="" />
       <p className="text-lg">Continue With Google</p>
       </button>

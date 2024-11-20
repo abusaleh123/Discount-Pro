@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Marquee from "react-fast-marquee";
 import { Link } from 'react-router-dom';
-import 'animate.css';
+
 import Section from './Section';
 const Banner = () => {
     const [brands, setBrands] = useState([]);
@@ -15,12 +15,12 @@ const saleOn = brands.filter(isSale => isSale.isSaleOn)
         <div>
                 <section>
              {/* Banner */}
-<div className='bgimage  w-10/12 mx-auto rounded-xl pt-20 pb-40 px-10 mt-10 text-center  ' data-aos="fade-down"
+<div className='bgimage  lg:w-10/12 mx-auto rounded-xl pt-20 pb-16 md:pb-40 px-10 mt-10 text-center  ' data-aos="fade-down"
  
     >
     <div className='flex flex-col justify-center items-center' >
-<h1 className='  text-white text-6xl w-6/12 font-bold leading-tight' >Your One-Stop Destination for Incredible Discounts!</h1>
-<p className=  ' text-white w-2/4 text-center mt-4'>Discount PRO simplifies savings by collecting coupons from top Bangladeshi e-commerce stores, enabling users to browse, copy, and redeem discounts effortlessly.</p>
+<h1 className='  text-white text-3xl md:text-6xl lg:w-6/12 font-bold leading-tight' >Your One-Stop Destination for Incredible Discounts!</h1>
+<p className=  ' text-white lg:w-2/4 text-center mt-4'>Discount PRO simplifies savings by collecting coupons from top Bangladeshi e-commerce stores, enabling users to browse, copy, and redeem discounts effortlessly.</p>
 <Link to={"/brands"} className='btn mt-6 btn-ghost border-orange-300 text-xl text-white'>See All</Link>
     </div>
 </div>
@@ -39,7 +39,7 @@ const saleOn = brands.filter(isSale => isSale.isSaleOn)
 
        <div className='mt-20 '>
 <h1 className="text-3xl mb-10 font-bold w-10/12 mx-auto">Brand with Active Status</h1>
-<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto w-10/12  gap-8' >
+<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto w-10/12  gap-8 mb-20' >
 {
     saleOn.length > 0 ? saleOn.map((brand) => (
         <div className="card text-start border bg-base-100"  data-aos="flip-up" >
@@ -54,7 +54,7 @@ const saleOn = brands.filter(isSale => isSale.isSaleOn)
   </figure>
   <div className="card-body items-center text-start" >
     <h2 className="card-title text-2xl font-semibold ">{brand.brand_name}</h2>
-    <p>{brand.description}</p>
+    <p className='text-center lg::text-left'>{brand.description}</p>
     <p className="font-semibold">Total Coupons: {brand.totalCoupons}</p>
     <p className="font-bold">Category:<span className='text-red-400 font-normal'> {brand.category}</span></p>
     <div className="card-actions">
