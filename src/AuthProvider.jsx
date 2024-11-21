@@ -40,6 +40,7 @@ const updateProfiler = (updatedProfile) => {
     return updateProfile(auth.currentUser, updatedProfile);
 }
 const resetPassword = (auth, email) => {
+    setLoading(true)
     return sendPasswordResetEmail(auth, email)
 }
 useEffect( () => {
@@ -48,6 +49,7 @@ useEffect( () => {
           setLoading(false)
       })
       return () => {
+        // setLoading(true)
           unsubscribe();
       }
   }, [])

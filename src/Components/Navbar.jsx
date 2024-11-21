@@ -92,12 +92,12 @@ const textColor = location.pathname === "/brands" ? "text-white" : location.path
      <h2 className="text-sm hidden md:block md:font-semibold">{user.email}</h2>
      </div>
     </div>
-    </> :  <Link to={"/register"} className="btn md:flex  btn-ghost text-lg border   border-orange-400"><CiUser className="text-orange-400 flex font-bold text-2xl" />Register</Link>
+    </> :  <Link to={"/register"} className="btn md:flex  btn-ghost md:text-lg border   border-orange-400"><CiUser className="text-orange-400 flex font-bold md:text-2xl" />Register</Link>
    }
 
 <div>
 {
-      user ? <Link to={"/"} onClick={logOut} className="btn  md:text-lg items-center w-24 md:w-28 lg:w-auto  btn-ghost border-orange-400">Log Out</Link>: <Link to={"/login"} className="btn btn-ghost  text-lg border border-orange-400">Login</Link>
+      user ? <Link to={"/"} onClick={logOut} className="btn  md:text-lg items-center w-24 md:w-28 lg:w-auto  btn-ghost border-orange-400">Log Out</Link>: <Link to={"/login"} className="btn btn-ghost text-sm  md:text-lg border border-orange-400">Login</Link>
     }
 </div>
   

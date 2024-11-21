@@ -12,7 +12,7 @@ import { Helmet } from 'react-helmet-async';
 
 const Login = () => {
 
-  const {loginUser, setUser, googleLogin,  showPassword, setShowPassword, email, setEmail} = useContext(AuthContext);
+  const {loginUser, setUser, googleLogin,  showPassword, setShowPassword, setLoading, email, setEmail} = useContext(AuthContext);
   const navigate = useNavigate();
   const provider = new GoogleAuthProvider()
 
@@ -27,7 +27,6 @@ const Login = () => {
 
         loginUser(email, password)
         .then((result) => {
-
           setUser(result);
           toast.success("Sign In Success");
           navigate("/")
